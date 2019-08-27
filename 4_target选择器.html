@@ -1,0 +1,54 @@
+<!--
+ * @Descripttion: 4_target选择器
+ * @version: v1.0.0
+ * @Author: Liuxin   微信: L2315496341 欢迎交流
+ * @Date: 2019-08-27 17:02:11
+ * @LastEditors: Liuxin
+ * @LastEditTime: 2019-08-27 17:15:02
+
+ 【keyPoint】:
+    target选择器
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>4_target选择器</title>
+</head>
+
+<style>
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main div {
+    margin: 0 5px;
+    height: 300px;
+    width: 100px;
+    background: powderblue;
+    transition: flex .5s;
+  }
+  div:target { /* 核心 */
+    background: purple;
+    color: #fff;
+    flex: 1;
+  }
+</style>
+
+<body>
+  <p>
+    <a href="#1">to 1</a>
+    <a href="#2">to 2</a>
+    <a href="#3">to 3</a>
+  </p>
+  <main>
+    <div id="1">1</div>
+    <div id="2">2</div>
+    <div id="3">3</div>
+  </main>
+</body>
+</html>
