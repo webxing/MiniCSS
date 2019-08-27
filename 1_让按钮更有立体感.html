@@ -1,0 +1,50 @@
+<!--
+ * @Descripttion: 1_让按钮更有立体感
+ * @version: v1.0.0
+ * @Author: Liuxin   微信: L2315496341 欢迎交流
+ * @Date: 2019-08-26 18:25:27
+ * @LastEditors: Liuxin
+ * @LastEditTime: 2019-08-27 11:37:26
+
+【keyPoint】:
+		按钮active时
+		阴影 = 原阴影 * 0.5
+		Y轴位移 = 原阴影 * 0.25
+【note】:
+		box-shadow: h-shadow v-shadow [blur] [spread] [color] [inset];
+		参数：水平阴影的位置  垂直阴影的位置 模糊距离 阴影的尺寸 阴影的颜色 内部阴影
+		逗号分隔时 写在前边的层级高于写在后边的
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1_让按钮更有立体感</title>
+</head>
+
+<style type="text/css">
+	button {
+		display: block;
+		margin: 10em auto;
+		border: none;
+		outline: none;
+		color: #fff;
+		padding: .6em 2em;
+		border-radius: .4em;
+		text-shadow: 0 2px 2px grey;
+		background: linear-gradient(#7ebdf1, #419ae2);
+
+		box-shadow: 0 .4em 0 #3787c7, 0 .4em .4em grey; /* 核心 */
+	}
+	button:active {
+		box-shadow: 0 .2em 0 #3787c7, 0 .2em .2em grey;  /* 核心 */
+		transform: translate(0, 0.1em);  /* 核心 */
+	}
+</style>
+
+<body>
+	<button>click</button>
+</body>
+</html>
